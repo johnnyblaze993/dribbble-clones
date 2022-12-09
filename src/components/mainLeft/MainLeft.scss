@@ -1,0 +1,44 @@
+@use "/src/sass/colors.scss" as colors;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mainLeft {
+  grid-area: mainLeft;
+  background-color: colors.$secondaryLight;
+  @include flexCenter;
+}
+
+//media query for mobile
+@media (max-width: 600px) {
+  .mainLeft {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .mainLeft__tag {
+    font-size: 1.5rem;
+  }
+  .mainLeft__title {
+    font-size: 2rem;
+  }
+  .mainLeft__text {
+    font-size: 1rem;
+  }
+}
+
+//media query for tablet
+@media (min-width: 600px) {
+  .mainLeft {
+    height: 50vh;
+  }
+}
+
+//media query for desktop
+@media (min-width: 868px) {
+  .mainLeft {
+    height: 55vh;
+  }
+}

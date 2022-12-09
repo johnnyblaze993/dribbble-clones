@@ -1,0 +1,94 @@
+@use "sass/colors";
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  height: 100vh;
+  width: 100vw;
+  background-color: colors.$secondaryDark;
+}
+.App {
+  color: colors.$mainColor;
+  display: grid;
+  height: 100%;
+  width: 100%;
+
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 0.15fr 0.7fr 0.15fr;
+  grid-template-areas:
+    "header header header header header header header header header header header header"
+    "mainLeft mainLeft mainLeft mainLeft mainLeft mainLeft mainRight mainRight mainRight mainRight mainRight mainRight"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+.mainRight {
+  grid-area: mainRight;
+  background-color: colors.$secondaryLight;
+  @include flexCenter;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: colors.$mainDark;
+  color: colors.$mainLight;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  @include flexCenter;
+}
+//media query for mobile
+@media (max-width: 600px) {
+  .container {
+    font-size: 1.5rem;
+  }
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mainRight {
+    height: 40vh;
+  }
+  .footer {
+    height: 10vh;
+  }
+}
+
+//media query for tablet
+@media (min-width: 600px) {
+  .container {
+    padding: 8rem 3rem;
+    font-size: 2.5rem;
+  }
+
+  .mainRight {
+    height: 50vh;
+  }
+  .footer {
+    height: 15vh;
+  }
+}
+
+//media query for desktop
+@media (min-width: 868px) {
+  .container {
+    padding: 7rem 2rem;
+    font-size: 4rem;
+  }
+
+  .mainRight {
+    height: 55vh;
+  }
+  .footer {
+    height: 15vh;
+  }
+}
