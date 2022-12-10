@@ -8,37 +8,387 @@
 .mainLeft {
   grid-area: mainLeft;
   background-color: colors.$secondaryLight;
+
   @include flexCenter;
 }
+.mainLeft__tag {
+  //no word wrap
+  white-space: nowrap;
+}
+.mainLeft__text {
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
 
-//media query for mobile
-@media (max-width: 600px) {
+  border-left: solid 2px colors.$mainDark;
+  padding-left: 1rem;
+}
+
+.mainLeft__title {
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.mainLeft_button_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.mainLeft__button {
+  background-color: colors.$mainDark;
+  color: colors.$secondaryLight !important;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.mainLeft__info_container {
+  @include flexCenter;
+}
+.mainLeft_button_flex {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.hourglass {
+  background-color: colors.$mainLight;
+  border-radius: 20rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  color: colors.$mainDark;
+}
+
+//media query for mini mobile
+@media (max-width: 319px) {
   .mainLeft {
     height: 40vh;
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    width: 100%;
+    gap: 1rem;
   }
   .mainLeft__tag {
-    font-size: 1.5rem;
+    font-size: 0.6rem;
+    font-weight: 600;
+    background-color: colors.$mainLight;
+    color: colors.$mainDark;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    text-transform: capitalize;
   }
   .mainLeft__title {
-    font-size: 2rem;
+    font-size: 1rem;
   }
   .mainLeft__text {
+    font-size: 0.6rem;
+    margin-bottom: 1rem;
+  }
+  .mainLeft_button_container {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+  }
+
+  .mainLeft__button {
+    background-color: colors.$mainDark;
+    color: colors.$mainLight;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: wrap;
+  }
+  .mainLeft__info_container {
+    gap: 10px;
+  }
+  .mainLeft_button_flex {
+    gap: 2px;
+  }
+  .mainLeft_button_flex_top {
+    color: colors.$mainDark;
+    font-size: x-small;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  .mainLeft_button_flex_bottom {
+    color: colors.$mainLight;
+    font-size: small;
+    white-space: nowrap;
+  }
+}
+
+//media query for mobile
+@media (min-width: 320px) and (max-width: 600px) {
+  .mainLeft {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 3rem;
+    width: 100%;
+    gap: 0.5rem;
+  }
+  .mainLeft__tag {
     font-size: 1rem;
+    font-weight: 600;
+    background-color: colors.$mainLight;
+    color: colors.$mainDark;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    text-transform: capitalize;
+  }
+  .mainLeft__title {
+    font-size: 1.8rem;
+  }
+  .mainLeft__text {
+    font-size: x-small;
+    margin-bottom: 1rem;
+  }
+  .mainLeft_button_container {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    width: 100%;
+  }
+
+  .mainLeft__button {
+    background-color: colors.$mainDark;
+    color: colors.$mainLight;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: medium;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: wrap;
+  }
+  .mainLeft__info_container {
+    display: flex;
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+  .mainLeft_button_flex {
+    gap: 2px;
+  }
+  .mainLeft_button_flex_top {
+    color: colors.$mainDark;
+    font-size: small;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  .mainLeft_button_flex_bottom {
+    color: colors.$mainLight;
+    font-size: medium;
+    white-space: nowrap;
   }
 }
 
 //media query for tablet
 @media (min-width: 600px) {
   .mainLeft {
-    height: 50vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 3rem;
+    width: 100%;
+    gap: 1.5rem;
+  }
+  .mainLeft__tag {
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: colors.$mainLight;
+    color: colors.$mainDark;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    text-transform: capitalize;
+  }
+  .mainLeft__title {
+    font-size: 2.2rem;
+  }
+  .mainLeft__text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .mainLeft_button_container {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    width: 100%;
+    margin-left: 1rem;
+  }
+
+  .mainLeft__button {
+    background-color: colors.$mainDark;
+    color: colors.$mainLight;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: large;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+  .mainLeft__info_container {
+    display: flex;
+    gap: 1rem;
+  }
+  .mainLeft_button_flex {
+    gap: 2px;
+  }
+  .mainLeft_button_flex_top {
+    color: colors.$mainDark;
+    font-size: medium;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  .mainLeft_button_flex_bottom {
+    color: colors.$mainLight;
+    font-size: large;
+    white-space: nowrap;
   }
 }
 
 //media query for desktop
-@media (min-width: 868px) {
+@media (min-width: 1007px) {
   .mainLeft {
-    height: 55vh;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 3rem;
+    width: 100%;
+    gap: 1.5rem;
+  }
+  .mainLeft__tag {
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: colors.$mainLight;
+    color: colors.$mainDark;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+    text-transform: capitalize;
+  }
+  .mainLeft__title {
+    font-size: 2.2rem;
+  }
+  .mainLeft__text {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  .mainLeft_button_container {
+    display: flex;
+    justify-content: center;
+    gap: 12%;
+    width: 80%;
+  }
+
+  .mainLeft__button {
+    background-color: colors.$mainDark;
+    color: colors.$mainLight;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: large;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+  .mainLeft__info_container {
+    display: flex;
+    gap: 1rem;
+  }
+  .mainLeft_button_flex {
+    gap: 2px;
+  }
+  .mainLeft_button_flex_top {
+    color: colors.$mainDark;
+    font-size: medium;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  .mainLeft_button_flex_bottom {
+    color: colors.$mainLight;
+    font-size: large;
+    white-space: nowrap;
+  }
+}
+
+//media query for xlarg - desktop
+@media (min-width: 1400px) {
+  .mainLeft {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 3rem;
+    width: 100%;
+    gap: 1.5rem;
+  }
+  .mainLeft__tag {
+    font-size: 3rem;
+    font-weight: 600;
+    background-color: colors.$mainLight;
+    color: colors.$mainDark;
+    padding: 1rem 2rem;
+    border-radius: 5rem;
+    text-transform: capitalize;
+  }
+  .mainLeft__title {
+    font-size: 6rem;
+  }
+  .mainLeft__text {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .mainLeft_button_container {
+    display: flex;
+    justify-content: center;
+    gap: 12%;
+    width: 80%;
+    margin-left: 2rem;
+  }
+
+  .mainLeft__button {
+    background-color: colors.$mainDark;
+    color: colors.$mainLight;
+    padding: 1.5rem 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 3rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+  .mainLeft__info_container {
+    display: flex;
+    gap: 1rem;
+
+    .hourglass {
+      padding: 1rem;
+    }
+  }
+  .mainLeft_button_flex {
+    gap: 2px;
+  }
+  .mainLeft_button_flex_top {
+    color: colors.$mainDark;
+    font-size: 2rem;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+  .mainLeft_button_flex_bottom {
+    color: colors.$mainLight;
+    font-size: 3rem;
+    white-space: nowrap;
   }
 }

@@ -15,12 +15,14 @@
   height: 100vh;
   width: 100vw;
   background-color: colors.$secondaryDark;
+  font-family: "Roboto", sans-serif;
 }
 .App {
   color: colors.$mainColor;
   display: grid;
   height: 100%;
   width: 100%;
+  position: relative;
 
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 0.15fr 0.7fr 0.15fr;
@@ -28,12 +30,6 @@
     "header header header header header header header header header header header header"
     "mainLeft mainLeft mainLeft mainLeft mainLeft mainLeft mainRight mainRight mainRight mainRight mainRight mainRight"
     "footer footer footer footer footer footer footer footer footer footer footer footer";
-}
-
-.mainRight {
-  grid-area: mainRight;
-  background-color: colors.$secondaryLight;
-  @include flexCenter;
 }
 
 .footer {
@@ -45,6 +41,17 @@
   font-weight: bold;
   @include flexCenter;
 }
+
+.bubbleContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 70%;
+  z-index: 1;
+  opacity: 0.1;
+}
 //media query for mobile
 @media (max-width: 600px) {
   .container {
@@ -55,9 +62,6 @@
     flex-direction: column;
   }
 
-  .mainRight {
-    height: 40vh;
-  }
   .footer {
     height: 10vh;
   }
@@ -66,7 +70,6 @@
 //media query for tablet
 @media (min-width: 600px) {
   .container {
-    padding: 8rem 3rem;
     font-size: 2.5rem;
   }
 
@@ -79,15 +82,17 @@
 }
 
 //media query for desktop
-@media (min-width: 868px) {
+@media (min-width: 1007px) {
   .container {
-    padding: 7rem 2rem;
     font-size: 4rem;
   }
 
-  .mainRight {
-    height: 55vh;
+  .footer {
+    height: 15vh;
   }
+}
+//media query for desktop
+@media (min-width: 1400px) {
   .footer {
     height: 15vh;
   }

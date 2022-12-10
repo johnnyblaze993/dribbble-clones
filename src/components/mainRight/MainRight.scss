@@ -1,0 +1,35 @@
+@use "/src/sass/colors.scss" as colors;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainRight {
+  grid-area: mainRight;
+  background-color: colors.$secondaryLight;
+
+  @include flexCenter;
+}
+
+//media query for mini mobile
+@media (max-width: 319px) {
+  .mainRight {
+    height: 40%;
+  }
+}
+@media (min-width: 320px) and (max-width: 600px) {
+  .mainRight {
+    height: 40%;
+  }
+}
+@media (min-width: 600px) {
+  .mainRight {
+    height: 100%;
+  }
+}
+@media (min-width: 1007px) {
+}
+@media (min-width: 1400px) {
+}
