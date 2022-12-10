@@ -5,6 +5,10 @@ const Footer = () => {
   return (
     <div className="footer">
       <div>hey</div>
+      <div>hey</div>
+      <div>hey</div>
+      <div>hey</div>
+      <div>hey</div>
     </div>
   );
 };
