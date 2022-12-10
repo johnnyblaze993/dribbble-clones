@@ -6,11 +6,13 @@ import blob from "../../assets/blob.svg";
 
 const MainRight = () => {
   return (
-    <div className="mainRight">
-      <div className="hands" style={{ backgroundImage: `url(${hand})` }}>
-        <div className="blob" style={{ backgroundImage: `url(${blob})` }}></div>
-      </div>
-    </div>
+    <>
+      <div
+        className="mainRight"
+        style={{ backgroundImage: `url(${hand})` }}
+      ></div>
+      <div className="blob" style={{ backgroundImage: `url(${blob})` }}></div>
+    </>
   );
 };
 

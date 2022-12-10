@@ -14,7 +14,7 @@
 .mainLeft__tag {
   //no word wrap
   white-space: nowrap;
-  background-color: colors.$secondaryColor !important;
+  background-color: colors.$secondaryDark !important;
 }
 .mainLeft__text {
   font-size: 0.8rem;
@@ -28,6 +28,7 @@
 .mainLeft__title {
   font-weight: 900;
   white-space: nowrap;
+  color: colors.$secondaryColor;
 }
 
 .mainLeft_button_container {
@@ -91,7 +92,7 @@
     font-size: 1rem;
   }
   .mainLeft__text {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
     margin-bottom: 1rem;
   }
   .mainLeft_button_container {
@@ -155,7 +156,7 @@
     font-size: 1.8rem;
   }
   .mainLeft__text {
-    font-size: x-small;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
   }
   .mainLeft_button_container {
@@ -206,7 +207,7 @@
     align-items: flex-start;
     padding: 0 3rem;
     width: 100%;
-    gap: 1.5rem;
+    gap: 1rem;
   }
   .mainLeft__tag {
     font-size: 1rem;
@@ -218,7 +219,7 @@
     text-transform: capitalize;
   }
   .mainLeft__title {
-    font-size: 2.2rem;
+    font-size: 2.5rem;
   }
   .mainLeft__text {
     font-size: 1.2rem;
@@ -284,7 +285,7 @@
     text-transform: capitalize;
   }
   .mainLeft__title {
-    font-size: 2.2rem;
+    font-size: 4rem;
   }
   .mainLeft__text {
     font-size: 1.2rem;
@@ -349,7 +350,7 @@
     text-transform: capitalize;
   }
   .mainLeft__title {
-    font-size: 6rem;
+    font-size: 5.5rem;
   }
   .mainLeft__text {
     font-size: 2.5rem;
@@ -358,9 +359,9 @@
   .mainLeft_button_container {
     display: flex;
     justify-content: center;
-    gap: 12%;
-    width: 80%;
-    margin-left: 2rem;
+    gap: 4%;
+    width: auto;
+    margin-left: 0.5rem;
   }
 
   .mainLeft__button {
@@ -383,17 +384,17 @@
     }
   }
   .mainLeft_button_flex {
-    gap: 2px;
+    gap: 1px;
   }
   .mainLeft_button_flex_top {
     color: colors.$mainDark;
-    font-size: 2rem;
+    font-size: 1.7rem;
     white-space: nowrap;
     font-weight: bold;
   }
   .mainLeft_button_flex_bottom {
     color: colors.$mainLight;
-    font-size: 3rem;
+    font-size: 2rem;
     white-space: nowrap;
   }
 }

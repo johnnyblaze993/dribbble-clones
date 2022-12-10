@@ -43,10 +43,9 @@
   opacity: 0.1;
 }
 //media query for mobile
-@media (max-width: 600px) {
+@media (max-width: 870px) {
   .container {
     font-size: 1.5rem;
-    padding: 0;
   }
   .App {
     display: flex;
@@ -55,7 +54,7 @@
 }
 
 //media query for tablet
-@media (min-width: 600px) {
+@media (min-width: 870px) {
   .container {
     font-size: 2.5rem;
   }

@@ -8,46 +8,64 @@
 
 .footer {
   grid-area: footer;
-  color: colors.$mainLight;
+  color: colors.$secondaryColor;
+  background-color: colors.$mainDark;
   text-align: center;
   font-weight: bold;
   height: 15vh;
   @include flexCenter;
+  white-space: nowrap;
+  align-items: center;
+
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
 }
 
 //media for 0 - 319px
 @media (max-width: 319px) {
   .footer {
-    font-size: 0.7rem;
+    font-size: 0.2rem;
     height: 10vh;
+
+    div {
+      gap: 0.1rem;
+    }
   }
 }
 
 //media query for mobile
 @media (max-width: 600px) {
   .footer {
-    font-size: 1rem;
+    font-size: 0.4rem;
     height: 10vh;
+
+    div {
+      gap: 0.3rem;
+    }
   }
 }
 
 //media query for tablet
 @media (min-width: 600px) {
   .footer {
-    font-size: 2rem;
+    font-size: 0.8rem;
   }
 }
 
 //media query for desktop
 @media (min-width: 1007px) {
   .footer {
-    font-size: 2.5rem;
+    font-size: 1.2rem;
   }
 }
 
 //media query for large desktop
 @media (min-width: 1400px) {
   .footer {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
