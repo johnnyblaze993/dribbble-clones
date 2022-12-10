@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.scss";
-// import Bubbles from "./components/bubbles/Bubbles";
+import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import MainLeft from "./components/mainLeft/MainLeft";
 import MainRight from "./components/mainRight/MainRight";
@@ -12,11 +12,8 @@ function App() {
         <Header />
         <MainLeft />
         <MainRight />
-        <div className="footer">footer</div>
+        <Footer />
       </div>
-      {/* <div className="bubbleContainer">
-        <Bubbles />
-      </div> */}
     </div>
   );
 }

@@ -14,8 +14,8 @@
 .container {
   height: 100vh;
   width: 100vw;
-  background-color: colors.$secondaryDark;
   font-family: "Roboto", sans-serif;
+  background-color: colors.$mainDark;
 }
 .App {
   color: colors.$mainColor;
@@ -32,16 +32,6 @@
     "footer footer footer footer footer footer footer footer footer footer footer footer";
 }
 
-.footer {
-  grid-area: footer;
-  background-color: colors.$mainDark;
-  color: colors.$mainLight;
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  @include flexCenter;
-}
-
 .bubbleContainer {
   position: absolute;
   top: 50%;
@@ -56,14 +46,11 @@
 @media (max-width: 600px) {
   .container {
     font-size: 1.5rem;
+    padding: 0;
   }
   .App {
     display: flex;
     flex-direction: column;
-  }
-
-  .footer {
-    height: 10vh;
   }
 }
 
@@ -72,13 +59,6 @@
   .container {
     font-size: 2.5rem;
   }
-
-  .mainRight {
-    height: 50vh;
-  }
-  .footer {
-    height: 15vh;
-  }
 }
 
 //media query for desktop
@@ -86,14 +66,7 @@
   .container {
     font-size: 4rem;
   }
-
-  .footer {
-    height: 15vh;
-  }
 }
 //media query for desktop
 @media (min-width: 1400px) {
-  .footer {
-    height: 15vh;
-  }
 }

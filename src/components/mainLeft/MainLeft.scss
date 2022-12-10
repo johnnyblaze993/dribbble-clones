@@ -7,19 +7,21 @@
 }
 .mainLeft {
   grid-area: mainLeft;
-  background-color: colors.$secondaryLight;
+  background-color: colors.$mainDark;
 
   @include flexCenter;
 }
 .mainLeft__tag {
   //no word wrap
   white-space: nowrap;
+  background-color: colors.$secondaryColor !important;
 }
 .mainLeft__text {
   font-size: 0.8rem;
   margin-bottom: 1rem;
+  color: colors.$mainLight;
 
-  border-left: solid 2px colors.$mainDark;
+  border-left: solid 2px colors.$mainColor;
   padding-left: 1rem;
 }
 
@@ -35,8 +37,8 @@
   gap: 1rem;
 }
 .mainLeft__button {
-  background-color: colors.$mainDark;
-  color: colors.$secondaryLight !important;
+  background-color: colors.$callToAction !important;
+  color: colors.$mainDark !important;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.5rem;
@@ -53,13 +55,16 @@
   text-align: left;
 }
 .hourglass {
-  background-color: colors.$mainLight;
+  background-color: colors.$secondaryColor;
   border-radius: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 5px;
   color: colors.$mainDark;
+}
+.mainLeft_button_flex_top {
+  color: colors.$mainColor !important;
 }
 
 //media query for mini mobile

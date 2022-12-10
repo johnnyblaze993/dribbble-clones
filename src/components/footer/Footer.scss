@@ -1,0 +1,17 @@
+@use "../../sass/colors.scss" as colors;
+
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: colors.$mainDark;
+  color: colors.$mainLight;
+  text-align: center;
+  font-size: 6rem;
+  font-weight: bold;
+  @include flexCenter;
+}

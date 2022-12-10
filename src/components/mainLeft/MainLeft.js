@@ -18,7 +18,7 @@ const MainLeft = () => {
     <div className="mainLeft">
       <div className="mainLeft__tag">
         {" "}
-        <span>Join the Club</span>
+        <span>Escape the Ordinary</span>
       </div>
       <h1 className="mainLeft__title">
         That's how we <br /> Get <span>things</span> done
