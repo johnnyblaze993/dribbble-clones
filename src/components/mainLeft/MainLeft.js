@@ -21,7 +21,7 @@ const MainLeft = () => {
         <span>Escape the Ordinary</span>
       </div>
       <h1 className="mainLeft__title">
-        That's how we <br /> Get <span>things</span> done
+        That's how we <br /> Get <span>things</span> done!
       </h1>
       <p className="mainLeft__text">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
